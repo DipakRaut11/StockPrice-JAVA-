@@ -15,6 +15,7 @@ public class StockMarket {
         providers = Arrays.asList(new BrokerA(), new BrokerB(), new BrokerC());
     }
 
+
     public List<StockPrice> getAllStockPrices() {
         List<StockPrice> allPrices = new ArrayList<>();
         for (StockPriceProvider provider : providers) {
@@ -22,4 +23,15 @@ public class StockMarket {
         }
         return allPrices;
     }
+
+
+    public void displayPrices(List<StockPrice> stockPrices) {
+        System.out.println("Real-Time Stock Prices:");
+        for (StockPrice stockPrice : stockPrices) {
+            System.out.println(stockPrice);
+        }
+        System.out.println("---------------------------");
+    }
+
+
 }
